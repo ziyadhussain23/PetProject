@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>PET Management System</title>
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>PET Management System</h1>
+  <hr>
+  <h2>Search By ID of PET</h2>
+
+  <form action="#" th:action="@{/pet/find}" th:object="${p2}" method="POST">
+    <label>ID:
+      <input type="number" th:field="*{id}" class="form-control mb-lg-4 col-4">
+    </label>
+
+
+
+    <button type="submit" class="btn btn-info col-2"> Find PET</button>
+  </form>
+
+  <hr>
+
+  <h2>Search By Name of PET</h2>
+
+  <form action="#" th:action="@{/pet/find2}" th:object="${p2}" method="POST">
+    <label>Name:
+      <input type="text" th:field="*{name}" class="form-control mb-lg-4 col-4">
+    </label>
+
+
+
+    <button type="submit" class="btn btn-info col-2"> Find PET</button>
+  </form>
+
+  <hr>
+
+  <a th:href = "@{/pet/home}" class = "btn btn-primary btn-sm mb-3"> Back to Home Page</a>
+</div>
+</body>
+</html>
